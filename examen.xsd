@@ -1,8 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.w3schools.com" xmlns="http://www.w3schools.com" elementFormDefault="qualified">
   <xs:element name="quiz">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="question" maxOccurs="unbounded" minOccurs="0">
+        <xs:element name="question" maxOccurs="10" minOccurs="0">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="type" maxOccurs="1" minOccurs="1">
@@ -20,7 +22,7 @@
               <xs:element type="xs:string" name="option" maxOccurs="unbounded" minOccurs="0"/>
               <xs:element type="xs:string" name="answer" maxOccurs="unbounded" minOccurs="1"/>
             </xs:sequence>
-            <xs:attribute type="xs:string" name="id" use="optional"/>
+            <xs:attribute type="xs:string" name="id" use="required"/>
           </xs:complexType>
         </xs:element>
       </xs:sequence>
